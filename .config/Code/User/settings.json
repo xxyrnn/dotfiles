@@ -1,25 +1,42 @@
 {
-    "workbench.startupEditor": "none",
-    "workbench.productIconTheme": "fluent-icons",
-    "workbench.iconTheme": "bearded-icons",
-    "workbench.colorTheme": "SynthWave '84",
+    "update.showReleaseNotes": false,
 
-    "workbench.editor.closeOnFileDelete": true,
+    "window.zoomLevel": 1,
+    "window.autoDetectHighContrast": false,
+    "window.autoDetectColorScheme": true,
+
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "SynthWave '84",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.iconTheme": "flow-dim",
+    "workbench.preferredDarkColorTheme": "SynthWave '84",
+    "workbench.preferredLightColorTheme": "Quiet Light",
+    "workbench.tips.enabled": false,
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.tree.indent": 15,
+    "workbench.tree.indent": 20,
 
     "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
     "editor.fontSize": 15,
     "editor.fontLigatures": true,
     "editor.lineHeight": 1.5,
-
     "editor.guides.bracketPairs": true,
 
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
 
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
     "css.validate": false,
     "less.validate": false,
-    "scss.validate": false
+    "scss.validate": false,
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "python.createEnvironment.trigger": "off",
+
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "python.analysis.typeCheckingMode": "basic",
 }
