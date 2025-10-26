@@ -1,0 +1,12 @@
+alias ls='lsd -lh'
+alias cl='clear'
+alias cll='clear && ls'
+
+alias py='python3'
+alias nv='nvim'
+alias xd='hexdump'
+alias yain='yay -S'
+
+alias wordlists='cd /usr/share/wordlists'
+alias seclists='cd /usr/share/seclists'
+alias payloadsallthethings='cd /usr/share/payloadsallthethings'

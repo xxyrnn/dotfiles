@@ -1,0 +1,25 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.iconTheme": "bearded-icons",
+    "workbench.colorTheme": "SynthWave '84",
+
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.tree.indent": 15,
+
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.5,
+
+    "editor.guides.bracketPairs": true,
+
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false
+}
