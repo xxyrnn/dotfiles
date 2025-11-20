@@ -1,6 +1,9 @@
 local o = vim.o
-o.cursorline = true
+o.number = true
+o.mouse = "a"
 o.guicursor = ""
 o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
+o.expandtab = true
+o.endofline = true
