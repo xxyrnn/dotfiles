@@ -14,3 +14,10 @@ alias py="python3"
 ## Better grep
 ## Remember to install rgrep or this will not work
 alias grep="rg --color=auto"
+
+## Colorize ip output
+alias ip="ip -c"
+
+## Select a directory with fzf and cd into it
+## Remember to install fzf or this will not work
+alias cdf='cd "$(find ~ -type d | fzf)"'
