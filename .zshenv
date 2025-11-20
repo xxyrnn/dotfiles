@@ -6,10 +6,7 @@ SAVEHIST=10000
 ## Other commonly used editors: nano, micro, vim, vi, emacs
 export EDITOR="nvim"
 
-## Add the $HOME/.local/bin directory to the system path
-export PATH="$HOME/.local/bin:$PATH"
-
-## Uncomment this if you use TOR to proxify the whole system
-## You can leave this uncommented even when TOR is not running,
-## the system will just bypass it without errors
+## Uncomment this when using TOR to proxify every interactive shell you open
+## WARNING: if this is left uncommented and TOR is not running, you will not
+## be able to access the internet from interactive shells
 # export ALL_PROXY="socks5://127.0.0.1:9050"
