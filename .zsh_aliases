@@ -1,11 +1,16 @@
+## Better ls
 ## Remember to install lsd or this will not work
-alias ls='lsd -lh'
+alias ls="lsd -lh"
 
 ## I could just press CTRL + L, but I prefer to fill up the history file
-alias cl='clear'
+alias cl="clear"
 
 ## I'm lazy
-alias cll='clear && ls'
+alias cll="clear && ls"
 
 ## I work too much with Python
-alias py='python3'
+alias py="python3"
+
+## Better grep
+## Remember to install rgrep or this will not work
+alias grep="rg --color=auto"
