@@ -2,7 +2,10 @@
 # ~/.zshrc
 #
 
-# The following lines were added by compinstall
+if [ -f ~/.zsh_options ]; then
+	. ~/.zsh_options
+fi
+
 zstyle :compinstall filename '$HOME/.zshrc'
 
 if [ -f ~/.dircolors ]; then
@@ -10,9 +13,7 @@ if [ -f ~/.dircolors ]; then
 fi
 
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
-
 autoload -Uz compinit && compinit
-# End of lines added by compinstall
 
 PROMPT="[ %B%F{cyan}%n%f@%F{cyan}%m%f%b %F{yellow}%~%f ]"$'\n'"%# "
 
@@ -32,8 +33,8 @@ if [ -f $(locate zsh-autosuggestions.zsh) ]; then
 fi
 
 # Better dashed-options and command history suggestions
-if [ -f $(locate zsh-autocomplete.plugin.zsh) ]; then
-    . $(locate zsh-autocomplete.plugin.zsh)
-fi
+#if [ -f $(locate zsh-autocomplete.plugin.zsh) ]; then
+#    . $(locate zsh-autocomplete.plugin.zsh)
+#fi
 # Restore the traditional zsh completion when pressing <TAB>
-bindkey "^I" menu-complete
+#bindkey "^I" menu-complete
