@@ -1,40 +1,27 @@
-# env
-[[ -f ~/.zshenv ]] && . ~/.zshenv
+#
+# ~/.zshrc
+#
 
-# options
-[[ -f ~/.zsh_options ]] && . ~/.zsh_options
-
-# completion
-autoload -Uz compinit && compinit
-
+# The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
 zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS}
 
-# prompt
-PS1="%B%F{cyan}%n%f@%F{cyan}%m%f%b - %F{yellow}%t%f | %F{green}%~%f"$'\n'"%# "
+autoload -Uz compinit && compinit
+# End of lines added by compinstall
 
-# basic aliases
-alias ls='ls --color'
-alias grep='grep --color'
-alias ip='ip -c'
+PROMPT="[ %B%F{cyan}%n%f@%F{cyan}%m%f%b %F{yellow}%~%f ]"$'\n'"%# "
 
-# custom aliases
+# Aliases
 if [ -f ~/.zsh_aliases ]; then
 	. ~/.zsh_aliases
 fi
 
-# plugins
-# syntax highlighting
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Syntax highlighting
+if [ -f $(locate zsh-syntax-highlighting.zsh) ]; then
+    . $(locate zsh-syntax-highlighting.zsh)
 fi
 
-# autosuggestions
-if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Command suggestions
+if [ -f $(locate zsh-autosuggestions.zsh) ]; then
+    . $(locate zsh-autosuggestions.zsh)
 fi
-
-# autocomplete
-# if [ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
-# 	source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-# fi
