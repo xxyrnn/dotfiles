@@ -25,7 +25,6 @@
     // "custom/media"
     "network",
     "cpu",
-    // "memory",
     "temperature",
     "hyprland/language",
     "backlight",
@@ -57,10 +56,6 @@
       "focused": "",
       "default": "",
     },
-  },
-  "hyprland/submap": {
-    "format": "{}",
-    "tooltip": false,
   },
   "hyprland/scratchpad": {
     "format": "{icon} {count}",
@@ -96,15 +91,12 @@
     "tooltip-format-disconnected": "MPD (disconnected)",
   },
   "tray": {
-    // "icon-size": 21,
     "spacing": 10,
     // "icons": {
     //   "blueman": "bluetooth",
-    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
     // }
   },
   "clock": {
-    // "timezone": "America/New_York",
     "format": "{:%I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%d/%m/%Y}",
@@ -156,7 +148,6 @@
     },
   },
   "network": {
-    // "interface": "wlan0", // (Optional) To force the use of this interface
     "format-wifi": "{ipaddr}",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
