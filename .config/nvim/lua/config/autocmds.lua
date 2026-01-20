@@ -1,4 +1,6 @@
-vim.api.nvim_create_autocmd("FileType", {
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd("FileType", {
     pattern = { "*" },
     callback = function(event)
         local buf = event.buf
@@ -12,5 +14,11 @@ vim.api.nvim_create_autocmd("FileType", {
         pcall(vim.treesitter.start, buf, lang)
         vim.bo[buf].indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
         vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    end,
+})
+autocmd("FileType", {
+    pattern = { "make" },
+    callback = function()
+        vim.o.expandtab = false
     end,
 })

@@ -1,0 +1,4 @@
+print_width = 120
+tab_width = 4
+require_config = false
+bracket_same_line = true
