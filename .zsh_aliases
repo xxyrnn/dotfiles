@@ -1,23 +1,14 @@
-## Better ls
-## Remember to install lsd or this will not work
-alias ls="lsd -lh"
+######################
+### ~/.zsh_aliases ###
+######################
 
-## I could just press CTRL + L, but I prefer to fill up the history file
-alias cl="clear"
-
-## I'm lazy
-alias cll="clear && ls"
-
-## I work too much with Python
-alias py="python3"
-
-## Better grep
-## Remember to install rgrep or this will not work
-alias grep="rg --color=auto"
-
-## Colorize ip output
-alias ip="ip -c"
-
-## Select a directory with fzf and cd into it
-## Remember to install fzf or this will not work
+alias ls='lsd -lh'
+alias grep='rg --color=auto'
+alias ip='ip -c'
+alias cl='clear'
+alias cll='clear && ls'
+alias clr='clear && fc -s'
+alias py='python3.14'
 alias cdf='cd "$(find ~ -type d | fzf)"'
+alias cat='bat'
+alias ff='fastfetch'
