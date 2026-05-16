@@ -1,0 +1,1 @@
+/home/xyrn/.config/colorschemes/catppuccin/hypr/colors.lua
