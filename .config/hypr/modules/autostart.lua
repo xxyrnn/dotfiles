@@ -37,8 +37,4 @@ hl.on("hyprland.start", function()
 
 	--- hyprshade
 	hl.exec_cmd("hyprshade auto")
-
-	--- noctalia
-	--- uncomment if you do not want to use it
-	hl.exec_cmd("qs -c noctalia-shell")
 end)

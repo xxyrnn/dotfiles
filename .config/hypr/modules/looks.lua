@@ -5,12 +5,9 @@
 local colors = require("modules.colors")
 
 hl.config({
-	--- NOCT = uncomment if you use noctalia-shell
 	general = {
-		-- gaps_in = 2.5,
-		gaps_in = 5, -- NOCT
-		-- gaps_out = 5,
-		gaps_out = 10, -- NOCT
+		gaps_in = 2.5,
+		gaps_out = 5,
 
 		border_size = 0,
 
@@ -28,16 +25,14 @@ hl.config({
 	},
 
 	decoration = {
-		-- rounding = 0,
-		rounding = 20, -- NOCT
+		rounding = 0,
 		rounding_power = 2,
 
 		active_opacity = 1.0,
 		inactive_opacity = 0.8,
 
 		shadow = {
-			-- enabled = false,
-			enabled = true, -- NOCT
+			enabled = false,
 			range = 4,
 			render_power = 3,
 			color = "rgba(1a1a1aee)",
@@ -45,13 +40,10 @@ hl.config({
 
 		blur = {
 			enabled = true,
-			-- size = 5,
-			size = 3, -- NOCT
-			-- passes = 1,
-			passes = 2, -- NOCT
+			size = 5,
+			passes = 1,
 
-			-- vibrancy = 0.5,
-			vibrancy = 0.1696, -- NOCT
+			vibrancy = 0.5,
 		},
 	},
 

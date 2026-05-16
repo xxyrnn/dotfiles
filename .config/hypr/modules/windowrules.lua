@@ -30,7 +30,7 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		class = "^(vlc|qimgv|spotify)$",
+		class = "^(vlc|imv|spotify)$",
 	},
 
 	workspace = "5",
