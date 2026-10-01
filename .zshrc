@@ -18,7 +18,8 @@ zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 autoload -Uz compinit && compinit
 
 ## Shell prompt
-PROMPT="[ %B%F{cyan}%n%f@%F{cyan}%m%f%b %F{yellow}%~%f ]"$'\n'"%# "
+# PROMPT="%B%F{cyan}%n%f@%F{cyan}%m%f%b %F{yellow}%~%f"$'\n'"%#> "
+eval "$(starship init zsh)"
 
 ## Aliases
 if [ -f ~/.zsh_aliases ]; then
@@ -26,19 +27,11 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 ## Syntax highlighting
-if [ -f $(locate zsh-syntax-highlighting.zsh) ]; then
-    . $(locate zsh-syntax-highlighting.zsh)
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 ## Command suggestions
-if [ -f $(locate zsh-autosuggestions.zsh) ]; then
-    . $(locate zsh-autosuggestions.zsh)
+if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
-
-## Better suggestions for dashed options and command history
-## WARNING: sometimes it makes the shell lag
-# if [ -f $(locate zsh-autocomplete.plugin.zsh) ]; then
-#     . $(locate zsh-autocomplete.plugin.zsh)
-# fi
-## Restore the traditional zsh completion when pressing <TAB>
-# bindkey "^I" menu-complete

@@ -3,6 +3,7 @@
 ######################
 
 alias ls='lsd -lh'
+alias l='ls'
 alias grep='rg --color=auto'
 alias ip='ip -c'
 alias cl='clear'

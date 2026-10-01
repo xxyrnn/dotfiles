@@ -1,5 +1,5 @@
 ## Add $HOME/.local/bin to the system path
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
 ## Change this to the editor you prefer
 ## Other commonly used editors: nano, micro, vim, vi, emacs
