@@ -4,22 +4,25 @@
 
 --- WINDOW RULES
 
+--- browsers and pdf readers on workspace 2
 hl.window_rule({
 	match = {
-		class = "^(zen|firefox|chromium|org.gnome.Evince|org.pwmt.zathura)$",
+		class = "^(zen|firefox|chromium|org.gnome.Evince|atril|zathura)$",
 	},
 
 	workspace = "2",
 })
 
+--- code and text editors on workspace 3
 hl.window_rule({
 	match = {
-		class = "^(Code|dev.zed.Zed|jetbrains-pycharm|Eclipse|obsidian)$",
+		class = "^(Code|dev.zed.Zed|jetbrains-pycharm|jetbrains-idea|Eclipse|md.obsidian.Obsidian)$",
 	},
 
 	workspace = "3",
 })
 
+--- messaging apps on workspace 4
 hl.window_rule({
 	match = {
 		class = "^(org.telegram.desktop|elecwhat)$",
@@ -28,6 +31,7 @@ hl.window_rule({
 	workspace = "4",
 })
 
+--- media apps on workspace 5
 hl.window_rule({
 	match = {
 		class = "^(vlc|imv|spotify)$",
@@ -36,9 +40,9 @@ hl.window_rule({
 	workspace = "5",
 })
 
---- make kitten float
+--- make kitty float
 -- hl.window_rule({
---     name = "floating-kitten",
+--     name = "floating-kitty",
 --     match = {
 --         class = "^(kitty)$"
 --     },
@@ -47,11 +51,11 @@ hl.window_rule({
 --     center = true
 -- })
 
---- make nemo float
+--- make file explorers float
 hl.window_rule({
-	name = "floating-nemo",
+	name = "floating-explorer",
 	match = {
-		class = "^(nemo)$",
+		class = "^(nemo|thunar|org.gnome.nautilus|dolphin)$",
 	},
 
 	float = true,
@@ -82,6 +86,15 @@ hl.window_rule({
 	center = true,
 })
 
+--- make Obsidian settings float
+hl.window_rule({
+	name = "floating-obsidian-settings",
+	match = {
+		class = "^(md.obsidian.Obsidian)$",
+		title = "^(Settings .+)$",
+	},
+})
+
 --- ignore maximize requests from apps
 hl.window_rule({
 	name = "suppress-maximize-events",
@@ -90,21 +103,6 @@ hl.window_rule({
 	},
 
 	suppress_event = "maximize",
-})
-
---- fix some dragging issues with xwayland
-hl.window_rule({
-	name = "fix-wayland-dragging-issues",
-	match = {
-		class = "^$",
-		title = "^$",
-		xwayland = true,
-		float = true,
-		fullscreen = false,
-		pin = false,
-	},
-
-	no_focus = true,
 })
 
 --- LAYER RULES
@@ -129,22 +127,27 @@ hl.layer_rule({
 	ignore_alpha = 0.5,
 })
 
-hl.layer_rule({
-	name = "noctalia",
+--- XWAYLAND
+
+--- fix some dragging issues with xwayland
+hl.window_rule({
+	name = "fix-wayland-dragging-issues",
 	match = {
-		namespace = "noctalia-background-.*$",
+		class = "^$",
+		title = "^$",
+		xwayland = true,
+		float = true,
+		fullscreen = false,
+		pin = false,
 	},
 
-	ignore_alpha = 0.5,
-	blur = true,
-	blur_popups = true,
+	no_focus = true,
 })
-
---- XWAYLAND
 
 --- fix pixelated font on x11 apps
 hl.config({
 	xwayland = {
+		force_zero_scaling = true,
 		use_nearest_neighbor = false,
 	},
 })

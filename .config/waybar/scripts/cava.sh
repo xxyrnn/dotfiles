@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
@@ -11,20 +11,10 @@ do
     i=$((i=i+1))
 done
 
-# write cava config
-config_file="/tmp/polybar_cava_config"
-echo "
-[general]
-bars = 10
-
-[output]
-method = raw
-raw_target = /dev/stdout
-data_format = ascii
-ascii_max_range = 7
-" > $config_file
+# read cava config
+config_file="$HOME/.config/waybar/cava/config"
 
 # read stdout from cava
-cava -p $config_file | while read -r line; do
-    echo $line | sed $dict
+cava -p "$config_file" | while read -r line; do
+    echo "$line" | sed "$dict"
 done

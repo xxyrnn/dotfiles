@@ -1,6 +1,6 @@
-@theme "catppuccin-default"
+@theme "style.rasi"
 configuration {
-    modes: "drun,filebrowser";
+    modes: "drun,filebrowser,window,run";
     font: "JetBrainsMono Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -34,7 +34,7 @@ configuration {
 /*	sort: false;*/
 /*	sorting-method: "normal";*/
 /*	case-sensitive: false;*/
-case-smart: true;
+    case-smart: true;
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
 /*	hover-select: false;*/
@@ -158,12 +158,12 @@ case-smart: true;
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
 }

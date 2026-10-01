@@ -1,1 +1,1 @@
-/home/xyrn/.config/colorschemes/catppuccin/hypr/colors.lua
+/home/xyrn/.config/colorschemes/nord/hypr/colors.lua

@@ -1,1 +1,6 @@
-pkill waybar || waybar
+{
+    killall cava.sh &&
+    killall waybar
+} || {
+    waybar &
+}

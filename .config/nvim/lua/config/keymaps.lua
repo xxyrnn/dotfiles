@@ -16,16 +16,15 @@ map("n", "<C-q>", "<cmd>q<CR>", { desc = "close file" })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "clear highlights" })
 
 -- comment
-map("n", "<C-/>", "gcc", { desc = "toggle comment", remap = true })
-map("v", "<C-/>", "gc", { desc = "toggle comment", remap = true })
+map("n", "<C-/>", "gcc", { desc = "toggle single-line comment", remap = true })
+map("v", "<C-/>", "gc", { desc = "toggle multi-line comment", remap = true })
 
 -- telescope
 map("n", "<C-f>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "telescope live grep" })
 
--- nvim-tree
--- map("n", "<C-n>", ":Neotree filesystem toggle reveal left<cr>", { desc = "neotree filesystem" })
-map("n", "<C-n>", ":NvimTreeToggle<cr>", { desc = "nvim-tree" })
+-- neotree
+map("n", "<C-n>", ":Neotree filesystem toggle reveal left<cr>", { desc = "neotree filesystem" })
 map("n", "<C-g>", ":Neotree git_status toggle left<cr>", { desc = "neotree git status" })
 
 -- lspconfig

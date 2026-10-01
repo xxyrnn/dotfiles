@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/xyrn/.config/colorschemes/vaporwave/wallpaper",
+    "alpha": "100",
+
+    "special": {
+        "background": "#190d23",
+        "foreground": "#f4e5bc",
+        "cursor": "#f4e5bc"
+    },
+    "colors": {
+        "color0": "#0b0811",
+        "color1": "#82222d",
+        "color2": "#65bf8c",
+        "color3": "#daae41",
+        "color4": "#2831b2",
+        "color5": "#bf65bd",
+        "color6": "#61f0ff",
+        "color7": "#ab8e88",
+        "color8": "#190d23",
+        "color9": "#82222d",
+        "color10": "#65bf8c",
+        "color11": "#daae41",
+        "color12": "#2831b2",
+        "color13": "#bf65bd",
+        "color14": "#61f0ff",
+        "color15": "#d2b9b4"
+    }
+}

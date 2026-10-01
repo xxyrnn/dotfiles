@@ -11,6 +11,7 @@ return {
             json = { "prettier" },
             jsonc = { "prettier" },
             c = { "clang-format" },
+            bash = { "shfmt" },
         },
         format_on_save = {},
     },

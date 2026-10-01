@@ -18,6 +18,7 @@ return {
                 formatting.prettier,
                 formatting.black,
                 formatting.clang_format,
+                formatting.shfmt,
                 null_ls.builtins.completion.spell,
             },
         }
