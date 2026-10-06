@@ -1,3 +1,8 @@
+/*****************************
+* ~/.config/waybar/style.css *
+* author: xxyrnn             *
+*****************************/
+
 @import "colors.css";
 
 * {
@@ -22,10 +27,9 @@ button:hover {
 
 #workspaces,
 /* #mode, */
-/* #scratchpad, */
 /* #custom-media, */
-#custom-cava,
-/* #mpd, */
+#cava,
+#mpd,
 #network,
 #cpu,
 #temperature,
@@ -43,7 +47,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: @fg;
+    color: @accent;
 }
 
 #workspaces button:hover {
@@ -51,7 +55,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    box-shadow: inset 0 -3px @fg;
+    background-color: @bg3;
+    color: @fg;
 }
 
 #workspaces button.urgent {
@@ -68,7 +73,7 @@ button:hover {
 /*   box-shadow: inset 0 -3px @text; */
 /* } */
 
-#custom-cava {
+#cava {
     color: @accent;
 }
 
@@ -142,14 +147,6 @@ button:hover {
 
 /* #mpd.disconnected { */
 /*     color: @red; */
-/* } */
-
-/* #scratchpad { */
-/*     background: rgba(0, 0, 0, 0.2); */
-/* } */
-
-/* #scratchpad.empty { */
-/*     background-color: transparent; */
 /* } */
 
 #privacy {

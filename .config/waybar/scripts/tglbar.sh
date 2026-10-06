@@ -1,6 +1,1 @@
-{
-    killall cava.sh &&
-    killall waybar
-} || {
-    waybar &
-}
+killall waybar || waybar &
