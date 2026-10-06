@@ -15,7 +15,7 @@
     "gtk-layer-shell": true,
 
     /// choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "cava"],
+    "modules-left": ["hyprland/workspaces", "cava/cava"],
     "modules-center": ["mpd"],
     "modules-right": [
         // "custom/media"
@@ -24,7 +24,7 @@
         "temperature",
         "hyprland/language",
         "backlight",
-        "pulseaudio",
+        "wireplumber",
         "battery",
         "power-profiles-daemon",
         "tray",
@@ -58,8 +58,8 @@
             "*": 10,
         },
     },
-    "cava": {
-        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+    "cava/cava": {
+        "cava_config": "/home/xyrn/.config/cava/config",
         "framerate": 30,
         "autosens": 1,
         // "sensitivity": 100,
@@ -132,7 +132,7 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", "", ""],
     },
-    "pulseaudio": {
+    "wireplumber": {
         "scroll-step": 5, // %, can be a float
         "format": "{icon} {volume}%",
         "format-muted": "",
@@ -145,7 +145,8 @@
             "headset": "",
             "default": ["", "", ""],
         },
-        "on-click": "pavucontrol",
+        "on-click": "hl.dsp.exec_cmd(\"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle\")",
+        "on-right-click": "wiremix",
     },
     "battery": {
         "states": {

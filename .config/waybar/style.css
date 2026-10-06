@@ -35,7 +35,7 @@ button:hover {
 #temperature,
 #language,
 #backlight,
-#pulseaudio,
+#wireplumber,
 #battery,
 #power-profiles-daemon,
 #tray,
@@ -114,7 +114,7 @@ button:hover {
     color: @red;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
     color: @red;
 }
 
