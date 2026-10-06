@@ -1,6 +1,7 @@
-############
-# ~/.zshrc #
-############
+####################
+## path: ~/.zshrc ##
+## author: xxyrnn ##
+####################
 
 ## Source options
 if [ -f ~/.zsh_options ]; then
@@ -16,6 +17,10 @@ fi
 
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 autoload -Uz compinit && compinit
+
+if [ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
+    . /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+fi
 
 ## Shell prompt
 # PROMPT="%B%F{cyan}%n%f@%F{cyan}%m%f%b %F{yellow}%~%f"$'\n'"%#> "
