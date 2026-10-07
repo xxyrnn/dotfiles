@@ -1,7 +1,24 @@
+##########################
+## path: ~/.zsh_options ##
+## author: xxyrnn       ##
+##########################
+
+## `cd` into a directory by writing its name
+## (e.g. just write `dirname` instead of `cd dirname`)
 setopt autocd
+
+## idk
+setopt interactive_comments
+
+## shows a more complex tip menu when TAB is pressed
 setopt extendedglob
+
+## something shell history related
 setopt append_history
 setopt hist_find_no_dups
+
+## turn off the "beep" sound when an error occurs
 unsetopt beep
 
+## vim keybindings
 bindkey -v

@@ -3,40 +3,51 @@
 ## author: xxyrnn ##
 ####################
 
-## Source options
+## creates a color dictionary to use in the prompt
+autoload -U colors && colors
+
+## shell prompt
+# PS1="%B%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[cyan]%}%m%{$reset_color%}%b %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
+eval "$(starship init zsh)"
+
+## shell options
 if [ -f ~/.zsh_options ]; then
 	. ~/.zsh_options
 fi
 
-zstyle :compinstall filename '$HOME/.zshrc'
+## zsh history configuration
+export HISTFILE=~/.zhistory
+export HISTSIZE=10000
+export SAVEHIST=10000
 
-## Source the file containing the LS_COLORS variable
+## shell completions
+autoload -U compinit
+
+zstyle :compinstall filename "~/.zcompdump"
+zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
+zstyle ":completion:*" menu select
+
+zmodload zsh/complist
+
+compinit
+_comp_options+=(globdots)
+
+## export the LS_COLORS variable for `ls` auto coloring
 if [ -f ~/.dircolors ]; then
     . ~/.dircolors
 fi
 
-zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
-autoload -Uz compinit && compinit
-
-if [ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
-    . /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-fi
-
-## Shell prompt
-# PROMPT="%B%F{cyan}%n%f@%F{cyan}%m%f%b %F{yellow}%~%f"$'\n'"%#> "
-eval "$(starship init zsh)"
-
-## Aliases
+## aliases
 if [ -f ~/.zsh_aliases ]; then
 	. ~/.zsh_aliases
 fi
 
-## Syntax highlighting
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## highlights shell syntax
+if [ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]; then
+    . /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 fi
 
-## Command suggestions
+## suggests commands using shell history
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
