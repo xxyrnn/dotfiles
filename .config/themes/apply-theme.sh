@@ -5,32 +5,33 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+CONFIG_DIR="$HOME/.config"
+
 THEME="$1"
-THEME_PATH="$HOME/.config/colorschemes/$THEME"
+THEME_PATH="$CONFIG_DIR/themes/$THEME"
 
 notify-send "Changing Theme" "Applying: $THEME"
 
 ## change wallpaper
-WALLPAPER="$THEME_PATH/wallpaper"
+WALLPAPERS_DIR="$THEME_PATH/wallpapers"
 
-if [ -d "$WALLPAPER" ]; then
-    ## TODO: multiple wallpapers
-    echo "dir"
+if [ -d "$WALLPAPERS_DIR" ]; then
+    ./wallpaper-selector.sh "$WALLPAPERS_DIR"
 fi
 
 awww img "$WALLPAPER" --transition-type wipe --transition-angle 135 --transition-fps 60 --transition-step 255
-ln -sf "$WALLPAPER" "$HOME/.config/hypr/hyprlock/wallpaper" ## make it available to hyprlock
+ln -sf "$WALLPAPER" "$CONFIG_DIR/hypr/hyprlock/wallpaper" ## make it available to hyprlock
 
 ## hyprland
-ln -sf "$THEME_PATH/hypr/colors.lua" "$HOME/.config/hypr/modules/colors.lua"
-ln -sf "$THEME_PATH/hypr/colors.conf" "$HOME/.config/hypr/modules/colors.conf"
+ln -sf "$THEME_PATH/hypr/colors.lua" "$CONFIG_DIR/hypr/modules/colors.lua"
+ln -sf "$THEME_PATH/hypr/colors.conf" "$CONFIG_DIR/hypr/modules/colors.conf"
 hyprctl reload
 
 ## waybar
 ## TODO: waybar config switcher
-ln -sf "$THEME_PATH/waybar/colors.css" "$HOME/.config/waybar/colors.css"
-pkill cava.sh
-pkill waybar; waybar &
+ln -sf "$THEME_PATH/configs/waybar/config.json" "$CONFIG_DIR/waybar/config.json"
+ln -sf "$THEME_PATH/colorschemes/waybar/colors.css" "$HOME/.config/waybar/colors.css"
+pkill waybar && waybar &
 
 ## kitty
 ln -sf "$THEME_PATH/kitty/colors.conf" "$HOME/.config/kitty/colors.conf"

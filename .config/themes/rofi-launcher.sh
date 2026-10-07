@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEMES_DIR="$HOME/.config/colorschemes"
+THEMES_DIR="$HOME/.config/themes"
 CWD="$(pwd)"
 
 cd "$THEMES_DIR" || exit 1

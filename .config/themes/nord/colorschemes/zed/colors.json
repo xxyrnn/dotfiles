@@ -23,9 +23,9 @@
                 "background": "#2e3440",
 
                 "element.background": "#3b4252",
-                "element.hover": "#88c0d066",
+                "element.hover": "#4c566a",
                 "element.active": "#88c0d066",
-                "element.selected": "#88c0d099",
+                "element.selected": "#3b4252",
                 "element.disabled": null,
                 "drop_target.background": "#88c0d099",
                 "ghost_element.background": null,
@@ -149,39 +149,6 @@
                 "warning.background": "#2e3440",
                 "warning.border": "#ebcb8b",
 
-                "players": [
-                    {
-                        "cursor": "#eceff4",
-                        "background": "#434c5e99",
-                        "selection": "#434c5e99"
-                    },
-                    {
-                        "cursor": "#eceff4",
-                        "background": "#eceff4",
-                        "selection": "#3b4252"
-                    },
-                    {
-                        "cursor": "#d08770",
-                        "background": "#d08770",
-                        "selection": "#d087703d"
-                    },
-                    {
-                        "cursor": "#a3be8c",
-                        "background": "#a3be8c",
-                        "selection": "#a3be8c3d"
-                    },
-                    {
-                        "cursor": "#b48ead",
-                        "background": "#b48ead",
-                        "selection": "#b48ead3d"
-                    },
-                    {
-                        "cursor": "#d08770",
-                        "background": "#d08770",
-                        "selection": "#d087703d"
-                    }
-                ],
-
                 "syntax": {
                     "attribute": {
                         "color": "#88c0d0",
@@ -204,7 +171,7 @@
                         "font_weight": null
                     },
                     "constant": {
-                        "color": "#d08770",
+                        "color": "#bf616a",
                         "font_style": null,
                         "font_weight": null
                     },
@@ -269,7 +236,7 @@
                         "font_weight": null
                     },
                     "string.escape": {
-                        "color": "#d08770",
+                        "color": "#88c0d0",
                         "font_style": null,
                         "font_weight": null
                     },
@@ -318,7 +285,15 @@
                         "font_style": null,
                         "font_weight": null
                     }
-                }
+                },
+
+                "players": [
+                    {
+                        "cursor": "#88c0d0",
+                        "background": "#2e3440",
+                        "selection": "#88c0d030"
+                    }
+                ]
             }
         }
     ]
