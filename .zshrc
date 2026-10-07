@@ -7,7 +7,7 @@
 autoload -U colors && colors
 
 ## shell prompt
-# PS1="%B%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[cyan]%}%m%{$reset_color%}%b %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
+# PROMPT="%{$fg_bold[cyan]%}%n%{$reset_color%}@%{$fg_bold[cyan]%}%m%{$reset_color%} %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
 eval "$(starship init zsh)"
 
 ## shell options
