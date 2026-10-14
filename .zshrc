@@ -1,13 +1,12 @@
-####################
-## path: ~/.zshrc ##
-## author: xxyrnn ##
-####################
+##############
+## ~/.zshrc ##
+##############
 
 ## creates a color dictionary to use in the prompt
 autoload -U colors && colors
 
 ## shell prompt
-# PS1="%B%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[cyan]%}%m%{$reset_color%}%b %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
+# PROMPT="%{$fg_bold[cyan]%}%n%{$reset_color%}@%{$fg_bold[cyan]%}%m%{$reset_color%} %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
 eval "$(starship init zsh)"
 
 ## shell options
@@ -51,3 +50,5 @@ fi
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+pfetch

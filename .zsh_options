@@ -1,7 +1,6 @@
-##########################
-## path: ~/.zsh_options ##
-## author: xxyrnn       ##
-##########################
+####################
+## ~/.zsh_options ##
+####################
 
 ## `cd` into a directory by writing its name
 ## (e.g. just write `dirname` instead of `cd dirname`)

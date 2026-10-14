@@ -1,7 +1,6 @@
-#####################
-## path: ~/.zshenv ##
-## author: xxyrnn  ##
-#####################
+###############
+## ~/.zshenv ##
+###############
 
 ## .config directory
 export XDG_CONFIG_HOME="$HOME/.config"
