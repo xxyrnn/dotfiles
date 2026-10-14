@@ -7,6 +7,9 @@ if not status is-interactive
     return
 end
 
+## remove the help message when starting a shell
+set fish_greeting ""
+
 ## environment variables
 if test -f ~/.config/fish/conf.d/environment.fish
     . ~/.config/fish/conf.d/environment.fish
