@@ -2,7 +2,7 @@
 ## ~/.zshenv ##
 ###############
 
-## .config directory
+## ~/.config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
 ## change this to your preferred editor
@@ -24,6 +24,8 @@ export GOPATH="$HOME/go"
 ## use custom themes in micro
 export MICRO_TRUECOLOR=1
 
+## idk
 export LESS="-R"
 
+## idk
 umask 022

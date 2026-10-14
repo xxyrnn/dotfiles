@@ -5,10 +5,6 @@
 ## creates a color dictionary to use in the prompt
 autoload -U colors && colors
 
-## shell prompt
-# PROMPT="%{$fg_bold[cyan]%}%n%{$reset_color%}@%{$fg_bold[cyan]%}%m%{$reset_color%} %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
-eval "$(starship init zsh)"
-
 ## shell options
 if [ -f ~/.zsh_options ]; then
 	. ~/.zsh_options
@@ -52,3 +48,7 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
 fi
 
 pfetch
+
+## shell prompt
+# PROMPT="%{$fg_bold[cyan]%}%n%{$reset_color%}@%{$fg_bold[cyan]%}%m%{$reset_color%} %{$fg[yellow]%}%~%{$reset_color%}"$'\n'"%#> "
+eval "$(starship init zsh)"
