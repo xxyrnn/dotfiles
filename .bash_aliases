@@ -1,6 +1,6 @@
-#######################
-### ~/.bash_aliases ###
-#######################
+#####################
+## ~/.bash_aliases ##
+#####################
 
 alias ls='lsd -lh'
 alias grep='rg --color=auto'
@@ -12,3 +12,4 @@ alias py='python3.14'
 alias cdf='cd "$(find ~ -type d | fzf)"'
 alias cat='bat'
 alias ff='fastfetch'
+alias hx='helix'
