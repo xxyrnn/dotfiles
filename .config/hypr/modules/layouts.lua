@@ -15,17 +15,17 @@ hl.config({
 		default_split_ratio = 1.0,
 		split_bias = 0,
 		precise_mouse_move = false,
-	},
+	}
 })
 
 hl.config({
 	master = {
 		new_status = "master",
-	},
+	}
 })
 
 hl.config({
 	scrolling = {
 		fullscreen_on_one_column = true,
-	},
+	}
 })

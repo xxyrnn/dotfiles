@@ -18,7 +18,7 @@ local main_mod = "SUPER" --- "Windows" key
 
 hl.bind(main_mod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(main_mod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(main_mod .. " + Q", hl.dsp.window.kill())
+hl.bind(main_mod .. " + Q", hl.dsp.window.close())
 hl.bind(main_mod .. " + SHIFT + Q", hl.dsp.exec_cmd("wleave"))
 hl.bind(main_mod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
@@ -36,7 +36,9 @@ hl.bind(main_mod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/waybar/scripts/tg
 --- fullscreen applications
 hl.bind(main_mod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
 --- theme selector
-hl.bind(main_mod .. " + T", hl.dsp.exec_cmd("~/.config/colorschemes/rofi-launcher.sh"))
+hl.bind(main_mod .. " + T", hl.dsp.exec_cmd("~/.config/themes/rofi-launcher.sh"))
+--- wallpaper selector
+hl.bind(main_mod .. " + SHIFT + T", hl.dsp.exec_cmd("~/.config/themes/wallpaper-selector.sh"))
 --- pick colors with main_mod + "Stamp"
 hl.bind(main_mod .. " + Print", hl.dsp.exec_cmd("hyprpicker -al"))
 --- take screenshots with the "Stamp" key

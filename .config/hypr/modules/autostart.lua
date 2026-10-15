@@ -12,13 +12,16 @@ hl.on("hyprland.start", function()
 	--- notification daemon
 	-- hl.exec_cmd("dunst")
 	--- notification center with integrated daemon
-	hl.exec_cmd("swaync")
+	-- hl.exec_cmd("swaync")
 
 	--- wallpaper
 	hl.exec_cmd("awww-daemon")
 
 	--- status bar
-	hl.exec_cmd("waybar")
+	-- hl.exec_cmd("waybar")
+
+	--- status bar
+	hl.exec_cmd("qs -c $(cat ~/.config/themes/current_theme)")
 
 	--- reduce brightness or lock screen when idle
 	-- hl.exec_cmd("hypridle")
@@ -34,7 +37,4 @@ hl.on("hyprland.start", function()
 
 	--- GTK theme
 	hl.exec_cmd("nwg-look -a")
-
-	--- hyprshade
-	hl.exec_cmd("hyprshade auto")
 end)

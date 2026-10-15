@@ -9,6 +9,4 @@ hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 -- use qt6ct for Qt theme
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct;qt5ct")
--- disable GTK window decorations
-hl.env("GTK_CSD", "0")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
