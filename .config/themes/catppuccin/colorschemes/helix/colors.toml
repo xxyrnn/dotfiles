@@ -1,0 +1,133 @@
+## GENERAL
+
+warning = "yellow"
+error = "red"
+info = "green"
+hint = "blue"
+
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.info" = { underline = { color = "green", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+## UI
+
+"ui.background" = { bg = "bg0" }
+"ui.background.separator" = "bg1"
+"ui.window" = "bg1"
+"ui.gutter" = { bg = "bg0" }
+"ui.statusline" = { bg = "bg1" }
+
+"ui.text" = "foreground"
+
+"ui.cursor" = { fg = "bg0", bg = "foreground" }
+"ui.cursor.select" = { bg = "orange" }
+"ui.cursor.match" = { bg = "bg3" }
+
+"ui.selection" = { fg = "gray0", bg = "bg3" }
+
+"ui.linenr" = "accent"
+"ui.linenr.selected" = "foreground"
+
+"ui.virtual.ruler" = "bg3"
+
+"ui.help" = { fg = "foreground", bg = "bg1" }
+
+"ui.highlight" = { bg = "yellow" }
+
+"ui.menu" = { fg = "foreground", bg = "bg1" }
+"ui.menu.selected" = { fg = "accent", bg = "bg3" }
+
+"ui.popup" = { fg = "foreground", bg = "bg1" }
+
+## SYNTAX HIGHLIGHTING
+
+property = "orange"
+special = "orange"
+attribute = "orange"
+
+type = "magenta"
+"type.enum.variant" = "green"
+
+constructor = "green"
+
+constant = "red"
+"constant.builtin" = "orange"
+"constant.character" = "green"
+"constant.character.escape" = "orange"
+"constant.numeric" = "orange"
+
+string = "green"
+"string.special.path" = { fg = "green", underline = { color = "green", style = "line" } }
+"string.special.url" = { fg = "blue", underline = { color = "blue", style = "line" } }
+
+comment = { fg = "bg3", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "green", modifiers = ["italic"] }
+
+variable = "yellow"
+"variable.builtin" = "magenta"
+"variable.parameter" = "foreground"
+"variable.other.member" = "orange"
+
+label = "orange"
+
+punctuation = "foreground"
+
+keyword = "magenta"
+"keyword.control.import" = { fg = "magenta", modifiers = ["italic"] }
+"keyword.operator" = "orange"
+"keyword.directive" = "bg3"
+
+operator = "foreground"
+
+function = "cyan"
+
+tag = "orange"
+"tag.error" = "red"
+
+namespace = "magenta"
+
+## MARKUP
+
+"markup.heading" = "accent"
+"markup.heading.marker" = "bg3"
+
+"markup.list" = "bg3"
+
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"markup.link.url" = { fg = "blue", underline = { color = "blue", style = "line" } }
+"markup.link.text" = { fg = "foreground", underline = { color = "foreground", style = "line" } }
+
+"markup.quote" = { fg = "foreground", bg = "bg3" }
+
+"markup.raw.inline" = { bg = "bg1" }
+"markup.raw.block" = "cyan"
+
+## VERSION CONTROL CHANGES
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "blue"
+"diff.delta.moved" = "yellow"
+
+## PALETTE
+
+[palette]
+accent = "#cba6f7"
+
+bg0 = "#11111b"
+bg1 = "#181825"
+bg2 = "#1e1e2e"
+bg3 = "#313244"
+
+foreground = "#cdd6f4"
+
+orange = "#fab387"
+
+gray0 = "#585b70"
+gray1 = "#8a8c9b"

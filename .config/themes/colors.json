@@ -1,0 +1,70 @@
+{
+    "nord": {
+        "bg0": "2e3440",
+        "bg1": "3b4252",
+        "bg2": "434c5e",
+        "bg3": "4c566a",
+
+        "fg": "eceff4",
+
+        "red": "bf616a",
+        "orange": "d08770",
+        "yellow": "ebcb8b",
+        "green": "a3be8c",
+        "aqua": "88c0d0",
+        "blue": "5e81ac",
+        "purple": "b48ead",
+        "pink": "d48ead",
+
+        "gray0": "d8dee9",
+        "gray1": "e5e9f0",
+
+        "accent": "88c0d0"
+    },
+
+    "catppuccin": {
+        "bg0": "11111b",
+        "bg1": "181825",
+        "bg2": "1e1e2e",
+        "bg3": "313244",
+
+        "fg": "cdd6f4",
+
+        "red": "f38ba8",
+        "orange": "fab387",
+        "yellow": "f9e2af",
+        "green": "a6e3a1",
+        "aqua": "94e2d5",
+        "blue": "89b4fa",
+        "purple": "cba6f7",
+        "pink": "f5c2e7",
+
+        "gray0": "585b70",
+        "gray1": "8a8c9b",
+
+        "accent": "cba6f7"
+    },
+
+    "vaporwave": {
+        "bg0": "0a0710",
+        "bg1": "180c22",
+        "bg2": "2a0938",
+        "bg3": "63173e",
+
+        "fg": "f2e5bb",
+
+        "red": "82222d",
+        "orange": "c4631f",
+        "yellow": "d9ad40",
+        "green": "65bf8b",
+        "aqua": "5ef0fd",
+        "blue": "2730b1",
+        "purple": "871550",
+        "pink": "be66bc",
+
+        "gray0": "ab8e88",
+        "gray1": "d2b9b2",
+
+        "accent": "871550"
+    }
+}

@@ -1,24 +1,25 @@
 {
-    "wallpaper": "/home/xyrn/.config/colorschemes/catppuccin/wallpaper",
+    "checksum": "None",
+    "wallpaper": "/home/xyrn/.config/themes/catppuccin/wallpapers/catppuccin1.jpg",
     "alpha": "100",
 
     "special": {
-        "background": "#1e1e2e",
+        "background": "#11111b",
         "foreground": "#cdd6f4",
         "cursor": "#cdd6f4"
     },
     "colors": {
-        "color0": "#181825",
+        "color0": "#11111b",
         "color1": "#f38ba8",
-        "color2": "#a6e3a8",
+        "color2": "#a6e3a1",
         "color3": "#f9e2af",
         "color4": "#89b4fa",
         "color5": "#cba6f7",
         "color6": "#94e2d5",
         "color7": "#585b70",
-        "color8": "#313244",
+        "color8": "#181825",
         "color9": "#f38ba8",
-        "color10": "#a6e3a8",
+        "color10": "#a6e3a1",
         "color11": "#f9e2af",
         "color12": "#89b4fa",
         "color13": "#cba6f7",

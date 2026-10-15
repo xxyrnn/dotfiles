@@ -1,24 +1,23 @@
 local colors = {
-    bg0 = "rgb(0b0811)",
-    bg1 = "rgb(190d23)",
-    bg2 = "rgb(2a0938)",
-    bg3 = "rgb(63173e)",
+	bg0 = "rgb(0a0710)",
+	bg1 = "rgb(180c22)",
+	bg2 = "rgb(2a0938)",
+	bg3 = "rgb(63173e)",
 
-    fg = "rgb(f4e5bc)",
+	fg = "rgb(f2e5bb)",
 
-    red = "rgb(82222d)",
-    orange = "rgb(c4631f)",
-    yellow = "rgb(daae41)",
-    green = "rgb(65bf8c)",
-    aqua = "rgb(61f0ff)",
-    blue = "rgb(2831b2)",
-    purple = "rgb(881550)",
-    pink = "rgb(bf65bd)",
+	red = "rgb(82222d)",
+	orange = "rgb(c4631f)",
+	yellow = "rgb(d9ad40)",
+	green = "rgb(65bf8b)",
+	cyan = "rgb(5ef0fd)",
+	blue = "rgb(2730b1)",
+	magenta = "rgb(871550)",
 
-    grey0 = "rgb(ab8e88)",
-    grey1 = "rgb(d2b9b4)",
+	grey0 = "rgb(ab8e88)",
+	grey1 = "rgb(d2b9b2)",
 
-    accent = "rgb(61f0ff)",
+	accent = magenta,
 }
 
 return colors

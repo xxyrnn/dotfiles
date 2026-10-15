@@ -8,9 +8,9 @@
 {
     "layer": "top", /// bar at top layer
     "position": "top", /// bar position (top|bottom|left|right)
-    "height": 30, /// bar height (remove for auto height)
-    "margin": "5 5 0 5",
-    "spacing": 10, /// gaps between modules (5px)
+    "height": 35, /// bar height (remove for auto height)
+    "margin": "5 5 0 5", /// bottom is 0 because hyprland window margin is 10 / 2 = 5
+    "spacing": 10, /// gaps between modules (10px / 2 = 5px for each side)
     "mode": "dock",
     "reload_style_on_change": true,
     "gtk-layer-shell": true,
@@ -20,7 +20,6 @@
     "modules-center": ["mpd"],
     "modules-right": [
         // "custom/media"
-        // "network",
         "cpu",
         "temperature",
         "hyprland/language",
@@ -104,6 +103,18 @@
         "tooltip-format-disconnected": "MPD (disconnected)",
     },
 
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜",
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
+        // "exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null", /// filter player based on name
+    },
     "cpu": {
         "format": " {usage}%",
         "tooltip": false,
@@ -161,18 +172,6 @@
             "balanced": "",
             "power-saver": "",
         },
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜",
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
-        // "exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "tray": {
         "spacing": 5,

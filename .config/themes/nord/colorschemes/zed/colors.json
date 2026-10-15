@@ -62,14 +62,14 @@
                 "scrollbar.track.background": "#2e3440",
                 "scrollbar.track.border": "#3b4252",
 
-                "editor.foreground": "#d8dee9",
+                "editor.foreground": "#eceff4",
                 "editor.background": "#2e3440",
                 "editor.gutter.background": "#2e3440",
                 "editor.subheader.background": "#3b4252",
                 "editor.active_line.background": "#3b4252",
                 "editor.highlighted_line.background": null,
-                "editor.line_number": "#4c566a",
-                "editor.active_line_number": "#d8dee9",
+                "editor.line_number": "#88c0d0",
+                "editor.active_line_number": "#eceff4",
                 "editor.invisible": null,
                 "editor.wrap_guide": "#3b4252",
                 "editor.active_wrap_guide": "#3b4252",
@@ -101,8 +101,8 @@
                 "terminal.ansi.cyan": "#88c0d0",
                 "terminal.ansi.bright_cyan": "#88c0d0",
                 "terminal.ansi.dim_cyan": null,
-                "terminal.ansi.white": "#e5e9f0",
-                "terminal.ansi.bright_white": "#eceff4",
+                "terminal.ansi.white": "#d8dee9",
+                "terminal.ansi.bright_white": "#e5e9f0",
                 "terminal.ansi.dim_white": null,
 
                 "link_text.hover": "#5e81ac",
@@ -176,7 +176,7 @@
                         "font_weight": null
                     },
                     "constructor": {
-                        "color": "#88c0d0",
+                        "color": "#a3be8c",
                         "font_style": null,
                         "font_weight": null
                     },
@@ -216,7 +216,7 @@
                         "font_weight": null
                     },
                     "punctuation.delimiter": {
-                        "color": "#88c0d0",
+                        "color": "#eceff4",
                         "font_style": null,
                         "font_weight": null
                     },
@@ -289,7 +289,7 @@
 
                 "players": [
                     {
-                        "cursor": "#88c0d0",
+                        "cursor": "#eceff4",
                         "background": "#2e3440",
                         "selection": "#88c0d030"
                     }

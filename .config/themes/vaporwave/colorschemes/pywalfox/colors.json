@@ -1,28 +1,29 @@
 {
-    "wallpaper": "/home/xyrn/.config/colorschemes/vaporwave/wallpaper",
+    "checksum": "None",
+    "wallpaper": "/home/xyrn/.config/themes/vaporwave/wallpapers/vaporwave1.jpg",
     "alpha": "100",
 
     "special": {
-        "background": "#190d23",
-        "foreground": "#f4e5bc",
-        "cursor": "#f4e5bc"
+        "background": "#0a0710",
+        "foreground": "#f2e5bb",
+        "cursor": "#f2e5bb"
     },
     "colors": {
-        "color0": "#0b0811",
+        "color0": "#0a0710",
         "color1": "#82222d",
-        "color2": "#65bf8c",
-        "color3": "#daae41",
-        "color4": "#2831b2",
-        "color5": "#bf65bd",
-        "color6": "#61f0ff",
+        "color2": "#65bf8b",
+        "color3": "#d9ad40",
+        "color4": "#2730b1",
+        "color5": "#be66bc",
+        "color6": "#5ef0fd",
         "color7": "#ab8e88",
-        "color8": "#190d23",
+        "color8": "#180c22",
         "color9": "#82222d",
-        "color10": "#65bf8c",
-        "color11": "#daae41",
-        "color12": "#2831b2",
-        "color13": "#bf65bd",
-        "color14": "#61f0ff",
-        "color15": "#d2b9b4"
+        "color10": "#65bf8b",
+        "color11": "#d9ad40",
+        "color12": "#2730b1",
+        "color13": "#be66bc",
+        "color14": "#5ef0fd",
+        "color15": "#d2b9b2"
     }
 }

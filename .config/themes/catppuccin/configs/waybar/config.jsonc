@@ -8,9 +8,9 @@
 {
     "layer": "top", /// bar at top layer
     "position": "top", /// bar position (top|bottom|left|right)
-    "height": 30, /// bar height (remove for auto height)
-    "margin": "5 5 0 5",
-    "spacing": 10, /// gaps between modules (5px)
+    "height": 35, /// bar height (remove for auto height)
+    "margin": "5 5 0 5", /// bottom is 0 because hyprland window margin is 10 / 2 = 5
+    "spacing": 10, /// gaps between modules (10px / 2 = 5px for each side)
     "mode": "dock",
     "reload_style_on_change": true,
     "gtk-layer-shell": true,
@@ -20,9 +20,6 @@
     "modules-center": ["mpd"],
     "modules-right": [
         // "custom/media"
-        // "network",
-        "cpu",
-        "temperature",
         "hyprland/language",
         "backlight",
         "wireplumber",
@@ -30,7 +27,7 @@
         "power-profiles-daemon",
         "tray",
         "clock",
-        "custom/notification",
+        "custom/notification"
     ],
 
     /// modules configuration
@@ -53,11 +50,11 @@
             "10": "十",
             "urgent": "",
             "focused": "",
-            "default": "",
+            "default": ""
         },
         "persistent-workspaces": {
-            "*": 10,
-        },
+            "*": 10
+        }
     },
     "cava": {
         "framerate": 60,
@@ -74,7 +71,7 @@
         "waves": false,
         "noise_reduction": 0.2,
         "input_delay": 2,
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
 
     "mpd": {
@@ -84,47 +81,50 @@
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
-            "on": "",
+            "on": ""
         },
         "random-icons": {
             "off": "<span color=\"@red\"></span> ",
-            "on": "",
+            "on": ""
         },
         "repeat-icons": {
-            "on": "",
+            "on": ""
         },
         "single-icons": {
-            "on": "1",
+            "on": "1"
         },
         "state-icons": {
             "paused": "",
-            "playing": "",
+            "playing": ""
         },
         "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
     },
 
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": false,
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+        // "exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null" /// filter player based on name
     },
     "hyprland/language": {
         "format": "{}",
         "format-en": "EN",
         "format-it": "IT",
-        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""]
     },
     "wireplumber": {
-        "scroll-step": 5, // %, can be a float
+        "scroll-step": 5, /// %, can be a float
         "format": "{icon} {volume}%",
         "format-muted": "",
         "format-bluetooth": "{icon} {volume}%",
@@ -134,22 +134,22 @@
         "format-icons": {
             "headphone": "",
             "headset": "",
-            "default": ["", "", ""],
+            "default": ["", "", ""]
         },
         "on-click": "kitty wiremix",
-        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
     "battery": {
         "states": {
             "warning": 20,
-            "critical": 10,
+            "critical": 10
         },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
         "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": ["", "", "", "", ""]
     },
     "power-profiles-daemon": {
         "format": "{icon}",
@@ -159,50 +159,47 @@
             "default": "",
             "performance": "",
             "balanced": "",
-            "power-saver": "",
-        },
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜",
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
-        // "exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+            "power-saver": ""
+        }
     },
     "tray": {
         "spacing": 5,
         "icons": {
-            "blueman": "bluetooth",
-        },
+            "blueman": "bluetooth"
+        }
     },
     "clock": {
         "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d/%m/%Y}",
+        "format-alt": "{:%d/%m/%Y}"
     },
     "custom/notification": {
         "tooltip": true,
         "format": "{icon}",
         "format-icons": {
-            "notification": "󱅫",
-            "none": "󰂜",
-            "dnd-notification": "󰂠",
-            "dnd-none": "󰪓",
-            "inhibited-notification": "󰂛",
-            "inhibited-none": "󰪑",
-            "dnd-inhibited-notification": "󰂛",
-            "dnd-inhibited-none": "󰪑",
+            "notification": "notifications_active",
+            "none": "notifications",
+            "dnd-notification": "notifications_active",
+            "dnd-none": "notifications_paused",
+            "inhibited-notification": "notification_important",
+            "inhibited-none": "notification_important",
+            "dnd-inhibited-notification": "notification_off",
+            "dnd-inhibited-none": "notifications_off"
         },
+        // "format-icons": {
+        //     "notification": "󱅫",
+        //     "none": "󰂜",
+        //     "dnd-notification": "󰂠",
+        //     "dnd-none": "󰪓",
+        //     "inhibited-notification": "󰂛",
+        //     "inhibited-none": "󰪑",
+        //     "dnd-inhibited-notification": "󰂛",
+        // },
         "return-type": "json",
         "exec-if": "which swaync-client",
         "exec": "swaync-client -swb",
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
-        "escape": true,
-    },
+        "escape": true
+    }
 }

@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-THEMES_DIR="$HOME/.config/themes"
+THEMES_PATH="$XDG_CONFIG_HOME/themes"
 CWD="$(pwd)"
 
-cd "$THEMES_DIR" || exit 1
+cd "$THEMES_PATH" || exit 1
 
 IFS=$'\n'
 SELECTED_THEME=$(for theme in */; do echo "${theme%/}"; done | rofi -dmenu -p "Choose Theme")

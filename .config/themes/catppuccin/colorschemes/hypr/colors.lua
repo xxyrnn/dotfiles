@@ -10,15 +10,14 @@ local colors = {
     orange = "rgb(fab387)",
     yellow = "rgb(f9e2af)",
     green = "rgb(a6e3a1)",
-    aqua = "rgb(94e2d5)",
+    cyan = "rgb(94e2d5)",
     blue = "rgb(89b4fa)",
-    purple = "rgb(cba6f7)",
-    pink = "rgb(f5c2e7)",
+    magenta = "rgb(cba6f7)",
 
     grey0 = "rgb(585b70)",
     grey1 = "rgb(8a8c9b)",
 
-    accent = "rgb(cba6f7)"
+    accent = magenta
 }
 
 return colors

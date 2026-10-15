@@ -1,0 +1,6 @@
+- python script that calls subscripts
+  - reads `colors.json` and passes as argument to subscripts
+  - one subscript for every type of file
+    - subscripts generate that type for every theme (?)
+  - script calls subscripts again for every theme (?)
+    - subscripts get passed the theme and only generate that theme (?)
