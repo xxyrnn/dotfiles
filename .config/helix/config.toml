@@ -1,0 +1,10 @@
+theme = "xyrn"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[keys.normal]
+C-s = ":w"
+C-q = ":q"
