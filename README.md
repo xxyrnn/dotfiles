@@ -28,7 +28,7 @@ The repo also contains configurations for `bash` and `zsh` as shells and `neovim
       btop pfetch networkmanager iwd nm-applet blueman awww hyprpm udiskie yazi fastfetch btop wleave bat lsd ripgrep plocate
   ```
   
-3. Download [`fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting) **(ONLY NEEDED IF YOU USE `zsh`)**:
+3. Download [`fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting) **(ONLY IF YOU USE `zsh`)**:
 
   ```bash
   git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git /usr/share/zsh/plugins/
@@ -52,8 +52,14 @@ The repo also contains configurations for `bash` and `zsh` as shells and `neovim
 
 ### Shell
 
-You should consider editing the following line in `~/.zshenv` (for `zsh`) or in `~/.config/fish/conf.d/environment.fish` (for `fish`) with
-your preferred locale, if necessary:
+You should consider editing the following line in `~/.config/fish/conf.d/environment.fish` (for `fish`) with your preferred
+locale, if necessary:
+
+```bash
+set -gx LC_ALL "en_US.UTF-8"
+```
+
+or in `~/.zshenv` (for `zsh`):
 
 ```bash
 export LC_ALL="en_US.UTF-8"
