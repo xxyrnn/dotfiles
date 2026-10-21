@@ -17,11 +17,8 @@ set -gx LC_ALL "en_US.UTF-8"
 ## golang path for packages and binaries
 set -gx GOPATH "$HOME/go"
 
-## add $HOME/.local/bin to the system path
-set -gx PATH "$PATH:$HOME/.local/bin"
-
-## add $GOPATH/bin to the system path
-set -gx PATH "$PATH:$GOPATH/bin"
+## add $HOME/.local/bin and $GOPATH/bin to the system path
+set -gx PATH "$PATH:$HOME/.local/bin:$GOPATH/bin"
 
 ## uncomment this when using TOR to proxify every interactive shell you open
 ## WARNING: if this is left uncommented while TOR is not running, you will not
