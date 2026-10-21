@@ -2,51 +2,58 @@
 
 ## Comments
 
-Comments starting with one more symbol than needed (e.g. `##`, `---`, `///`) try to explain what's happening, while the normal ones are actual commented-out lines.
+Comments starting with one symbol more than needed (e.g. `##`, `---`, `///`) try to explain what's happening, while the normal
+ones are actual commented-out lines.
+
+---
 
 ## Installation
 
-Install dependencies:
+My distro is Arch Linux, so this guide uses `pacman` as package manager, but you can use your preferred one: as far as I know,
+the only package with a different name is `base-devel`, which is `build-essential` in Debian-based distros (and Fedora?).
 
-- Debian-based:
-  
+Furthermore, this guide uses `fish` as shell and `helix` and `micro` as terminal editors, but you can use your preferred ones.
+The repo also contains configurations for `bash` and `zsh` as shells and `neovim` as terminal editor.
+
+1. Install dependencies:
+   
   ```bash
-  sudo apt update && sudo apt -y install zsh zsh-autosuggestions neovim python3 npm
+  sudo pacman -Sy base-devel python3 npm
   ```
   
-- Fedora:
-  
+2. Install software:
+   
   ```bash
-  sudo dnf update && sudo dnf -y install zsh zsh-autosuggestions neovim python3 npm
+  sudo pacman -Sy polkit polkit-gnome ly hyprland quickshell kitty pipewire fish helix rofi zed nwg-look qt5ct qt6ct wiremix \
+      btop pfetch networkmanager iwd nm-applet blueman awww hyprpm udiskie yazi fastfetch btop wleave bat lsd ripgrep plocate
   ```
   
-- Arch Linux:
-  
+3. Download [`fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting) **(ONLY NEEDED IF YOU USE `zsh`)**:
+
   ```bash
-  sudo pacman -Sy zsh zsh-autosuggestions neovim python3 npm
+  git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git /usr/share/zsh/plugins/
   ```
 
-Download [`fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting):
+4. Clone the repo and `cd` into it:
 
-```bash
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git /usr/share/zsh/plugins/
-```
+  ```bash
+  git clone https://github.com/xxyrnn/dotfiles.git && cd dotfiles
+  ```
 
-Clone the repo and `cd` into it:
+5. Make `install.sh` executable and run it:
 
-```bash
-git clone https://github.com/xxyrnn/dotfiles.git && cd dotfiles
-```
+  ```bash
+  chmod +x install.sh && ./install.sh
+  ```
 
-Make `install.sh` executable and run it:
+---
 
-```bash
-chmod +x install.sh && ./install.sh
-```
+## Configuration
 
-## Zsh
+### Shell
 
-You should consider editing the following line in `~/.zshenv` with your preferred locale if necessary:
+You should consider editing the following line in `~/.zshenv` (for `zsh`) or in `~/.config/fish/conf.d/environment.fish` (for `fish`) with
+your preferred locale, if necessary:
 
 ```bash
 export LC_ALL="en_US.UTF-8"
@@ -54,3 +61,11 @@ export LC_ALL="en_US.UTF-8"
 
 > [!NOTE]
 > If you do not know what locale you are using, run `cat /etc/locale.conf` and read the value of the `LANG` variable.
+
+### GTK
+
+To remove the buttons (minimize, maximize, close) from GTK3/GTK4 window decorations run the following command:
+
+```bash
+gsettings set org.gnome.desktop.wm.preferences button-layout ':'
+```
