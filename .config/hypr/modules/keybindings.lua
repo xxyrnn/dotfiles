@@ -2,47 +2,35 @@
 --- keybindings.lua ---
 -----------------------
 
---- MOST USED
+--- COMMON APPS
 
-local terminal = "kitty"
-local file_manager = "nemo"
---- rofi options are single-dashed
-local menu = "rofi"
---- wofi options are double-dashed
--- local menu = "wofi"
-local browser = "firefox"
+local terminal = "kitty" --- other common options: `foot`, `alacritty`
+local file_manager = "nemo" --- other common options: `thunar`, `dolphin`
+local menu = "rofi" --- other common options: `wofi`, `dmenu`
+local browser = "helium-browser" --- other common options: `firefox`, `chromium`
 
 --- MAIN
 
 local main_mod = "SUPER" --- "Windows" key
 
-hl.bind(main_mod .. " + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind(main_mod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(main_mod .. " + Q", hl.dsp.window.close())
-hl.bind(main_mod .. " + SHIFT + Q", hl.dsp.exec_cmd("wleave"))
-hl.bind(main_mod .. " + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
-hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(file_manager))
+hl.bind(main_mod .. " + RETURN", hl.dsp.exec_cmd(terminal)) --- launch terminal
+hl.bind(main_mod .. " + B", hl.dsp.exec_cmd(browser)) --- launch web browser
+hl.bind(main_mod .. " + Q", hl.dsp.window.close()) --- close active window
+hl.bind(main_mod .. " + SHIFT + Q", hl.dsp.exec_cmd("wleave")) --- power menu
+hl.bind(main_mod .. " + L", hl.dsp.exec_cmd("hyprlock")) --- lock screen
+hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("hyprshutdown")) --- exit hyprland
+hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(file_manager)) --- launch file explorer
 hl.bind(main_mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(main_mod .. " + D", hl.dsp.exec_cmd(menu .. " -show drun"))
-hl.bind(main_mod .. " + R", hl.dsp.exec_cmd(menu .. " -show run"))
-hl.bind("ALT + TAB", hl.dsp.exec_cmd(menu .. " -show window"))
-hl.bind(main_mod .. " + SHIFT + D", hl.dsp.exec_cmd("networkmanager_dmenu"))
-hl.bind(main_mod .. " + CTRL + D", hl.dsp.exec_cmd("rofi-bluetooth"))
-hl.bind(main_mod .. " + P", hl.dsp.window.pseudo())
-hl.bind(main_mod .. " + J", hl.dsp.layout("togglesplit"))
---- reset waybar
-hl.bind(main_mod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/waybar/scripts/tglbar.sh"))
---- fullscreen applications
+--- NOTE: single-dashed options for rofi, double-dashed for wofi
+hl.bind(main_mod .. " + D", hl.dsp.exec_cmd(menu .. " -show drun")) --- open app menu
+hl.bind(main_mod .. " + SHIFT + D", hl.dsp.exec_cmd("networkmanager_dmenu")) --- show a wifi connection menu using rofi
+hl.bind(main_mod .. " + CTRL + D", hl.dsp.exec_cmd("rofi-bluetooth")) --- show a bluetooth connection menu using rofi
+hl.bind(main_mod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/waybar/scripts/tglbar.sh")) --- toggle waybar
 hl.bind(main_mod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
---- theme selector
-hl.bind(main_mod .. " + T", hl.dsp.exec_cmd("~/.config/themes/rofi-launcher.sh"))
---- wallpaper selector
-hl.bind(main_mod .. " + SHIFT + T", hl.dsp.exec_cmd("~/.config/themes/wallpaper-selector.sh"))
---- pick colors with main_mod + "Stamp"
-hl.bind(main_mod .. " + Print", hl.dsp.exec_cmd("hyprpicker -al"))
---- take screenshots with the "Stamp" key
-hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region -o $HOME/Pictures/Screenshots"))
+hl.bind(main_mod .. " + T", hl.dsp.exec_cmd("~/.config/themes/rofi-launcher.sh")) --- theme selector
+hl.bind(main_mod .. " + SHIFT + T", hl.dsp.exec_cmd("~/.config/themes/wallpaper-selector.sh")) --- wallpaper selector
+hl.bind(main_mod .. " + Print", hl.dsp.exec_cmd("hyprpicker -al")) --- color picker
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region -o $HOME/Pictures/Screenshots")) --- take screenshot
 
 --- move focus with main_mod + arrow keys
 hl.bind(main_mod .. " + left", hl.dsp.focus({ direction = "l" }))
