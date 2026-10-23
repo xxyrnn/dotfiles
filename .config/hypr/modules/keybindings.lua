@@ -16,7 +16,7 @@ local main_mod = "SUPER" --- "Windows" key
 hl.bind(main_mod .. " + RETURN", hl.dsp.exec_cmd(terminal)) --- launch terminal
 hl.bind(main_mod .. " + B", hl.dsp.exec_cmd(browser)) --- launch web browser
 hl.bind(main_mod .. " + Q", hl.dsp.window.close()) --- close active window
-hl.bind(main_mod .. " + SHIFT + Q", hl.dsp.exec_cmd("wleave")) --- power menu
+hl.bind(main_mod .. " + SHIFT + Q", hl.dsp.exec_cmd("wlogout")) --- power menu
 hl.bind(main_mod .. " + L", hl.dsp.exec_cmd("hyprlock")) --- lock screen
 hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("hyprshutdown")) --- exit hyprland
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(file_manager)) --- launch file explorer
