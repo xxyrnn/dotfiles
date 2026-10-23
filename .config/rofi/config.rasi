@@ -1,6 +1,6 @@
 @theme "style.rasi"
 configuration {
-    modes: "drun,filebrowser,window,run";
+    modes: "drun";
     font: "JetBrainsMono Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
