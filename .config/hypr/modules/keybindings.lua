@@ -7,7 +7,7 @@
 local terminal = "kitty" --- other common options: `foot`, `alacritty`
 local file_manager = "nemo" --- other common options: `thunar`, `dolphin`
 local menu = "rofi" --- other common options: `wofi`, `dmenu`
-local browser = "helium-browser" --- other common options: `firefox`, `chromium`
+local browser = "firefox" --- other common options: `brave`, `chromium`
 
 --- MAIN
 
