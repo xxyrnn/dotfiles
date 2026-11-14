@@ -1,7 +1,7 @@
 color-link default "#f2e5bb,#0a0710"
 color-link comment "#63173e"
 color-link selection "#ab8e8899"
-color-link hlsearch "#d9ad4099"
+color-link hlsearch "#fc00fd99"
 
 color-link identifier "#5ef0fd"
 color-link identifier.class "#5ef0fd"
@@ -37,7 +37,7 @@ color-link scrollbar "#f2e5bb99"
 color-link statusline "#d2b9b2,#180c22"
 color-link tabbar "#d2b9b2,#180c22"
 color-link indent-char "#d2b9b2"
-color-link line-number "#871550"
+color-link line-number "#fc00fd"
 color-link current-line-number "#f2e5bb"
 
 color-link cursor-line "#ab8e88,#f4e5bc"

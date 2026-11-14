@@ -18,7 +18,7 @@ hl.config({
 
 		resize_on_border = false,
 
-		--- see https://wiki.hypr.land/Configuring/Tearing/ before you turn this on
+		-- see https://wiki.hypr.land/Configuring/Tearing/ before you turn this on
 		allow_tearing = false,
 
 		layout = "dwindle"
@@ -31,12 +31,7 @@ hl.config({
 		active_opacity = 1.0,
 		inactive_opacity = 0.8,
 
-		shadow = {
-			enabled = false,
-			range = 4,
-			render_power = 3,
-			color = "rgba(1a1a1aee)",
-		},
+		shadow = { enabled = false },
 
 		blur = {
 			enabled = true,
@@ -52,9 +47,9 @@ hl.config({
 	},
 
 	misc = {
-		--- set to 0 or 1 to disable the anime mascot wallpapers
+		-- set to 0 or 1 to disable the anime mascot wallpapers
 		force_default_wallpaper = 0,
-		--- if true disables the random hyprland logo / anime girl background
+		-- if true disables the random hyprland logo / anime girl background
 		disable_hyprland_logo = true
 	}
 })
