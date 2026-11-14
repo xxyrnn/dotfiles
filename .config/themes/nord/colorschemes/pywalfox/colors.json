@@ -1,29 +1,29 @@
 {
-    "checksum": "None",
-    "wallpaper": "/home/xyrn/.config/themes/nord/wallpapers/nord1.jpg",
+    "checksum": "b5ec340914dba2d3a65cc5b250d69a2a",
+    "wallpaper": "/home/xyrn/.config/wpg/wallpapers/mountains.jpg",
     "alpha": "100",
 
     "special": {
-        "background": "#2e3440",
-        "foreground": "#eceff4",
-        "cursor": "#eceff4"
+        "background": "#241f3d",
+        "foreground": "#c8c7ce",
+        "cursor": "#c8c7ce"
     },
     "colors": {
-        "color0": "#2e3440",
-        "color1": "#bf616a",
-        "color2": "#a3be8c",
-        "color3": "#ebcb8b",
-        "color4": "#5e81ac",
-        "color5": "#b48ead",
-        "color6": "#88c0d0",
-        "color7": "#d8dee9",
-        "color8": "#3b4252",
-        "color9": "#bf616a",
-        "color10": "#a3be8c",
-        "color11": "#ebcb8b",
-        "color12": "#5e81ac",
-        "color13": "#b48ead",
-        "color14": "#88c0d0",
-        "color15": "#e5e9f0"
+        "color0": "#241f3d",
+        "color1": "#CC6874",
+        "color2": "#715B86",
+        "color3": "#745A84",
+        "color4": "#8A5B81",
+        "color5": "#8F668B",
+        "color6": "#AB6884",
+        "color7": "#c8c7ce",
+        "color8": "#6e6a82",
+        "color9": "#CC6874",
+        "color10": "#715B86",
+        "color11": "#745A84",
+        "color12": "#8A5B81",
+        "color13": "#8F668B",
+        "color14": "#AB6884",
+        "color15": "#c8c7ce"
     }
 }

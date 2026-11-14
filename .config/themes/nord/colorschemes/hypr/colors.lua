@@ -1,4 +1,4 @@
-local colors = {
+return {
 	bg0 = "rgb(2e3440)",
 	bg1 = "rgb(3b4252)",
 	bg2 = "rgb(434c5e)",
@@ -13,11 +13,10 @@ local colors = {
 	cyan = "rgb(88c0d0)",
 	blue = "rgb(5e81ac)",
 	magenta = "rgb(b48ead)",
+	pink = "rgb(d48ead)",
 
 	grey0 = "rgb(d8dee9)",
 	grey1 = "rgb(e5e9f0)",
 
-	accent = cyan,
+	accent = "rgb(88c0d0)", -- cyan
 }
-
-return colors

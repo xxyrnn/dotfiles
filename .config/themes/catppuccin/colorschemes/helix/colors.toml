@@ -26,7 +26,7 @@ hint = "blue"
 "ui.cursor.select" = { bg = "orange" }
 "ui.cursor.match" = { bg = "bg3" }
 
-"ui.selection" = { fg = "gray0", bg = "bg3" }
+"ui.selection" = { fg = "grey0", bg = "bg3" }
 
 "ui.linenr" = "accent"
 "ui.linenr.selected" = "foreground"
@@ -129,5 +129,5 @@ foreground = "#cdd6f4"
 
 orange = "#fab387"
 
-gray0 = "#585b70"
-gray1 = "#8a8c9b"
+grey0 = "#585b70"
+grey1 = "#9399b2"

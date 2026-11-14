@@ -127,9 +127,9 @@
                 "ignored": "#d8dee966",
                 "ignored.background": null,
                 "ignored.border": null,
-                "info": "#5e81ac",
+                "info": "#a3be8c",
                 "info.background": "#2e3440",
-                "info.border": "#5e81ac",
+                "info.border": "#a3be8c",
                 "modified": "#ebcb8b",
                 "modified.background": null,
                 "modified.border": null,
@@ -166,7 +166,7 @@
                         "font_weight": null
                     },
                     "comment.doc": {
-                        "color": "#4c566a",
+                        "color": "#a3be8c",
                         "font_style": "italic",
                         "font_weight": null
                     },
@@ -236,7 +236,7 @@
                         "font_weight": null
                     },
                     "string.escape": {
-                        "color": "#88c0d0",
+                        "color": "#d08770",
                         "font_style": null,
                         "font_weight": null
                     },

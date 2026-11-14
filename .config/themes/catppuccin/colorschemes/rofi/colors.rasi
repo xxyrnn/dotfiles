@@ -12,7 +12,7 @@
     blue: #89b4fa;
     purple: #cba6f7;
     pink: #f5c2e7;
-    grey0: #45475a;
-    grey1: #585b70;
+    grey0: #585b70;
+    grey1: #9399b2;
     accent: #cba6f7;
 }
