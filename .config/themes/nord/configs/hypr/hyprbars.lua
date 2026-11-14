@@ -28,9 +28,9 @@ hl.config({
 				text = colors.fg,
 			},
 
-			on_double_click = [[hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })']],
-		},
-	},
+			on_double_click = [[hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })']]
+		}
+	}
 })
 
 hl.plugin.hyprbars.add_button({
@@ -38,7 +38,7 @@ hl.plugin.hyprbars.add_button({
 	fg_color = colors.bg2,
 	size = 18,
 	icon = "",
-	action = "hyprctl dispatch 'hl.dsp.window.close()'",
+	action = "hyprctl dispatch 'hl.dsp.window.close()'"
 })
 
 hl.plugin.hyprbars.add_button({
@@ -46,7 +46,7 @@ hl.plugin.hyprbars.add_button({
 	fg_color = colors.bg2,
 	size = 18,
 	icon = "",
-	action = [[hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })']],
+	action = [[hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })']]
 })
 
 hl.plugin.hyprbars.add_button({
@@ -54,5 +54,5 @@ hl.plugin.hyprbars.add_button({
 	fg_color = colors.bg2,
 	size = 18,
 	icon = "",
-	action = "hyprctl dispatch 'hl.dsp.window.float()'",
+	action = "hyprctl dispatch 'hl.dsp.window.float()'"
 })

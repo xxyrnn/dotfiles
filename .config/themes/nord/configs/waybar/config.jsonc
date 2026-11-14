@@ -16,7 +16,7 @@
     "gtk-layer-shell": true,
 
     /// choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["dwl/workspaces"],
     "modules-center": [],
     "modules-right": [
         "hyprland/language",
@@ -30,7 +30,7 @@
     ],
 
     /// modules configuration
-    "hyprland/workspaces": {
+    "dwl/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
