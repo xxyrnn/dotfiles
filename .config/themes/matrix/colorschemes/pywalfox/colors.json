@@ -1,0 +1,29 @@
+{
+    "checksum": "None",
+    "wallpaper": "/home/xyrn/.config/themes/matrix/wallpapers/matrix1.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#030303",
+        "foreground": "#e4f6dc",
+        "cursor": "#e4f6dc"
+    },
+    "colors": {
+        "color0": "#12130f",
+        "color1": "#5e0910",
+        "color2": "#008529",
+        "color3": "#9e7523",
+        "color4": "#0d3747",
+        "color5": "#5e3730",
+        "color6": "#1ca152",
+        "color7": "#638c7c",
+        "color8": "#0f221c",
+        "color9": "#5e0910",
+        "color10": "#008529",
+        "color11": "#9e7523",
+        "color12": "#0d3747",
+        "color13": "#5e3730",
+        "color14": "#1ca152",
+        "color15": "#c1d2d9"
+    }
+}

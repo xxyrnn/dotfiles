@@ -1,0 +1,198 @@
+/* xyrn-nord for Obsidian */
+/* by xxyrnn */
+/* https://github.com/xxyrnn */
+
+body {
+    --font-text-theme: "NeverMind", sans-serif;
+    --h1-color: var(--color-accent);
+    --h2-color: var(--color-accent);
+    --h3-color: var(--color-accent);
+    --h4-color: var(--color-accent);
+    --h5-color: var(--color-accent);
+    --h6-color: var(--color-accent);
+    --link-color: var(--color-blue);
+    --link-external-color: var(--color-blue);
+    --link-external-decoration: none;
+    --link-external-decoration-hover: none;
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --code-background: var(--background-secondary);
+    --code-keyword: var(--color-purple);
+    --code-function: var(--color-cyan);
+    --code-operator: var(--code-normal);
+    --code-property: var(--color-yellow);
+    --code-value: var(--color-orange);
+    --font-monospace-theme: "JetBrainsMonoNL Nerd Font", monospace;
+    --font-preferred-size: 18px;
+    --code-comment: var(--text-muted);
+    --background-modifier-border-focus: var(--color-base-30);
+    --table-header-color: var(--color-accent);
+    --text-highlight-bg: var(--highlight-background-purple);
+    --background-primary-alt: var(--color-base-20);
+    --radius-s: 0;
+    --radius-m: 0;
+    --radius-l: 0;
+}
+
+.theme-light {
+    --color-base-100: #4c4f69;
+    --color-base-00: #dce0e8;
+    --color-blue: #1e66f5;
+    --color-green: #40a02b;
+    --color-yellow: #df8e1d;
+    --color-orange: #fe640b;
+    --color-red: #d20f39;
+    --color-purple: #8839ef;
+    --color-pink: #ea76cb;
+    --color-cyan: #179299;
+    --color-base-30: #ccd0da;
+    --color-base-20: #e6e9ef;
+    --color-base-25: #eff1f5;
+}
+
+.theme-dark {
+    --color-accent: var(--color-cyan);
+    --color-accent-1: var(--color-accent);
+    --color-accent-2: var(--color-accent);
+    --color-base-00: #030303;
+    --color-base-20: #12130f;
+    --color-base-25: #151a16;
+    --color-base-30: #0f221c;
+    --color-base-60: #638c7c;
+    --color-base-70: #c1d2d9;
+    --color-base-100: #e4f6dc;
+    --color-red: #5e0910;
+    --color-orange: #873625;
+    --color-yellow: #9e7523;
+    --color-green: #008529;
+    --color-cyan: #1ca152;
+    --color-blue: #0d3747;
+    --color-purple: #5e3730;
+    --color-pink: #a97c5f;
+}
+
+/* table-center */
+.markdown-rendered table,
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+    width: 80%;
+    max-width: 100%; /* does not go beyond text column */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* in Live Preview the widget is a container itself, so we also center that */
+.markdown-source-view.mod-cm6 .cm-table-widget {
+    display: flex;
+    justify-content: center;
+}
+
+/* rounded-tab-cards */
+.mod-root .workspace-tab-header-container-inner {
+    --tab-curve: 0;
+    --tab-radius: var(--radius-m);
+    --tab-radius-active: var(--radius-m);
+    gap: 4px;
+    padding-bottom: 4px;
+}
+
+.mod-root .workspace-tab-header::before,
+.mod-root .workspace-tab-header::after,
+.mod-root .workspace-tab-header-inner::before,
+.mod-root .workspace-tab-header-inner::after {
+    display: none !important;
+}
+
+.mod-root .workspace-tab-header {
+    padding: 0;
+    overflow: hidden;
+}
+
+.mod-root .workspace-tab-header .workspace-tab-header-inner {
+    height: 100%;
+    margin: 0;
+    padding: 14px 8px;
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.mod-root .workspace-tab-header.is-active {
+    background: var(--background-primary);
+    border-color: var(--interactive-accent);
+}
+
+.mod-root .workspace-tab-header:not(.is-active):hover {
+    background: var(--background-modifier-hover);
+}
+
+.mod-root .workspace-tab-header:hover .workspace-tab-header-inner,
+.mod-root .workspace-tab-header .workspace-tab-header-inner:hover {
+    background: transparent !important;
+}
+
+/* div.internal-embed.is-loaded.file-embed.mod-empty-attachment */
+div.internal-embed.is-loaded.file-embed.mod-empty-attachment {
+    background: var(--background-secondary);
+}
+
+/* table-round-corners */
+.markdown-rendered table,
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+    --table-radius: var(--radius-s);
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none;
+}
+
+/* right and bottom border on each cell, to avoid double borders */
+.markdown-rendered :is(th, td),
+.markdown-source-view.mod-cm6 .cm-table-widget :is(th, td) {
+    border: none;
+    border-right: var(--table-border-width) solid var(--table-border-color);
+    border-bottom: var(--table-border-width) solid var(--table-border-color);
+}
+
+/* top border on thead */
+.markdown-rendered thead :is(th, td),
+.markdown-source-view.mod-cm6 .cm-table-widget thead :is(th, td) {
+    border-top: var(--table-border-width) solid var(--table-border-color);
+}
+
+/* left border on the first column */
+.markdown-rendered tr > :first-child,
+.markdown-source-view.mod-cm6 .cm-table-widget tr > :first-child {
+    border-left: var(--table-border-width) solid var(--table-border-color);
+}
+
+/* the four angles */
+.markdown-rendered thead tr:first-child > :first-child,
+.markdown-source-view.mod-cm6
+    .cm-table-widget
+    thead
+    tr:first-child
+    > :first-child {
+    border-top-left-radius: var(--table-radius);
+}
+.markdown-rendered thead tr:first-child > :last-child,
+.markdown-source-view.mod-cm6
+    .cm-table-widget
+    thead
+    tr:first-child
+    > :last-child {
+    border-top-right-radius: var(--table-radius);
+}
+.markdown-rendered tbody tr:last-child > :first-child,
+.markdown-source-view.mod-cm6
+    .cm-table-widget
+    tbody
+    tr:last-child
+    > :first-child {
+    border-bottom-left-radius: var(--table-radius);
+}
+.markdown-rendered tbody tr:last-child > :last-child,
+.markdown-source-view.mod-cm6
+    .cm-table-widget
+    tbody
+    tr:last-child
+    > :last-child {
+    border-bottom-right-radius: var(--table-radius);
+}
