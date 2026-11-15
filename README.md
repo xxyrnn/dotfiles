@@ -1,12 +1,5 @@
 # xyrn's dotfiles
 
-## Comments
-
-Comments starting with one symbol more than needed (e.g. `##`, `---`, `///`) try to explain what's happening, while the normal
-ones are actual commented-out lines.
-
----
-
 ## Installation
 
 My distro is Arch Linux, so this guide uses `pacman` as package manager, but you can use your preferred one: as far as I know,
